@@ -38,7 +38,15 @@
         <div id="numberSets" class="number-sets" aria-live="polite"></div>
 
         <div class="actions">
-          <span class="one-game-label">오늘의 한 조합</span>
+          <label class="count-control" for="setCount">생성 줄 수
+            <select id="setCount">
+              <option value="1" selected>1줄</option>
+              <option value="2">2줄</option>
+              <option value="3">3줄</option>
+              <option value="4">4줄</option>
+              <option value="5">5줄</option>
+            </select>
+          </label>
           <button class="primary-button" id="generateButton" type="button"><span>번호 뽑기</span><span class="button-arrow">→</span></button>
         </div>
         <p class="disclaimer">※ 본 서비스는 재미를 위한 랜덤 번호 생성기입니다.</p>
