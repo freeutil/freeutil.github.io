@@ -7,6 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .shell{max-width:1280px;padding:18px 24px 20px}.hero{padding:28px 4px 18px}.hero h1{margin:6px 0 8px;font-size:34px}.hero p:last-child{font-size:13px}.workspace{padding:12px;gap:8px;grid-template-areas:"message message" "input output"}.panel-head{padding:11px 14px 9px}.panel-head h2{font-size:14px}.output-panel .panel-head{gap:12px}.output-actions{display:flex;align-items:center;gap:12px}textarea{height:560px}.output{min-height:611px;max-height:650px;padding:14px 16px;overflow:auto}.json-line{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-all;min-height:1.7em}.json-key{color:#287d9e}.json-string{color:#a45f2d}.json-number{color:#765bb0}.json-boolean{color:#2b8a61}.json-null{color:#9a679a}.panel-foot{padding:7px 14px}footer{margin-top:12px}
+    @media(max-width:650px){.shell{padding:14px 12px}.hero{padding:30px 3px 16px}.hero h1{font-size:32px}.workspace{padding:8px}textarea{height:280px}.output{min-height:280px}}
+  </style>
 </head>
 <body>
   <main class="shell">
@@ -18,9 +22,8 @@
         <textarea id="jsonInput" spellcheck="false" placeholder="Paste your JSON here."></textarea>
         <div class="panel-foot"><span id="charCount">0 chars</span><button class="clear-button" id="clearButton" type="button">Clear</button></div>
       </div>
-      <div class="toolbar"><button class="primary-button" id="parseButton" type="button">Parse JSON <span>→</span></button><div class="tool-actions"><button id="formatButton" type="button">Format</button><button id="minifyButton" type="button">Minify</button></div></div>
       <div id="message" class="message" role="status"></div>
-      <div class="panel output-panel"><div class="panel-head"><div><span class="panel-label">RESULT</span><h2>Structure Preview</h2></div><button class="ghost-button" id="copyButton" type="button">Copy result</button></div><div id="output" class="output empty">Parse JSON to see the result.</div></div>
+      <div class="panel output-panel"><div class="panel-head"><div><span class="panel-label">RESULT</span><h2>Parsed JSON</h2></div><div class="output-actions"><button class="ghost-button" id="formatButton" type="button">Format</button><button class="ghost-button" id="minifyButton" type="button">Minify</button><button class="ghost-button" id="copyButton" type="button">Copy result</button></div></div><div id="output" class="output empty">Parse JSON to see the result.</div></div>
     </section>
     <footer><span>FreeUtil · Simple, useful web tools</span><span>JSON is processed in your browser.</span></footer>
   </main>
