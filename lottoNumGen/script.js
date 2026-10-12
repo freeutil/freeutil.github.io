@@ -7,7 +7,8 @@ function colorFor(number) { return colors.find(color => number <= color.max).cla
 function makeNumbers() { return [...Array(45)].map((_, i) => i + 1).sort(() => Math.random() - .5).slice(0, 6).sort((a,b) => a-b); }
 function render() {
   numberSets.innerHTML = '';
-  for (let i = 0; i < Number(setCount.value); i += 1) {
+  const count = Math.min(5, Math.max(1, parseInt(setCount.value, 10) || 1));
+  for (let i = 0; i < count; i += 1) {
     const numbers = makeNumbers();
     const row = document.createElement('div'); row.className = 'number-set'; row.style.animationDelay = `${i * 70}ms`;
     row.innerHTML = `<span class="set-label">${String(i + 1).padStart(2, '0')}</span><div class="balls">${numbers.map(number => `<span class="ball ${colorFor(number)}">${number}</span>`).join('')}</div><button class="copy-button" type="button" aria-label="${numbers.join(', ')} 복사">복사</button>`;
