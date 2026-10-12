@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="행운의 번호를 빠르게 뽑아보는 로또 자동 번호 생성기" />
+    <title>행운 번호 뽑기 · 로또 자동 생성기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="행운 번호 뽑기 홈">
+          <span class="brand-mark">✦</span>
+          <span>행운 번호 뽑기</span>
+        </a>
+        <div class="top-note"><span class="status-dot"></span> 매주 토요일, 작은 설렘</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow">LOTTO 6/45 · RANDOM PICK</div>
+        <h1>오늘의 행운을<br /><em>가볍게</em> 골라보세요.</h1>
+        <p>아무 생각 없이, 하지만 공정하게.<br />1부터 45까지 숫자 중 6개를 랜덤으로 뽑아드려요.</p>
+      </section>
+
+      <section class="generator-card" aria-labelledby="generator-title">
+        <div class="card-heading">
+          <div>
+            <span class="mini-label">YOUR LUCKY NUMBERS</span>
+            <h2 id="generator-title">행운 번호 생성</h2>
+          </div>
+          <button class="icon-button" id="refreshButton" type="button" title="새 번호 뽑기" aria-label="새 번호 뽑기">↻</button>
+        </div>
+
+        <div id="numberSets" class="number-sets" aria-live="polite"></div>
+
+        <div class="actions">
+          <span class="one-game-label">오늘의 한 조합</span>
+          <button class="primary-button" id="generateButton" type="button"><span>번호 뽑기</span><span class="button-arrow">→</span></button>
+        </div>
+        <p class="disclaimer">※ 본 서비스는 재미를 위한 랜덤 번호 생성기입니다.</p>
+      </section>
+
+      <section class="tip-row">
+        <div class="tip-icon">☼</div>
+        <div><strong>작은 팁</strong><p>마음에 드는 조합은 번호 옆 복사 버튼으로 간직해보세요.</p></div>
+      </section>
+
+      <footer><span>행운은 준비된 마음에 찾아옵니다.</span><span>© lucky pick</span></footer>
+    </main>
+    <div class="toast" id="toast" role="status">번호를 복사했어요.</div>
+    <script src="script.js"></script>
+  </body>
+</html>
