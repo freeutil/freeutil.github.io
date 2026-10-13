@@ -1,1 +1,27 @@
-<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="인터넷에서 N년 떠돈 짤 만들기. JPG 이미지를 업로드하고 오래된 인터넷 이미지처럼 변환해보세요."><title>FreeUtil · 인터넷에서 N년 떠돈 짤 만들기</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><main class="shell"><header class="topbar"><div class="brand"><span class="brand-mark">✦</span> FreeUtil</div><span class="tool-tag">IMAGE TOOL</span></header><section class="hero"><p class="eyebrow">IMAGE · MEME AGE</p><h1 id="title">인터넷에서 N년 떠돈 짤</h1><p id="tagline">이미지를 업로드하고 인터넷을 오래 떠돈 것처럼 만들어보세요.</p></section><section class="workspace"><div class="upload" id="dropZone"><input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp"><div class="upload-icon">↥</div><h2 id="uploadTitle">이미지를 업로드하세요</h2><p id="uploadHint">JPG, PNG, WebP · 브라우저에서만 처리됩니다</p><button id="uploadButton" type="button">이미지 선택</button></div><div class="controls" id="controls" hidden><label><span id="yearsLabel">인터넷에 떠돈 기간</span><output id="yearsValue">10년</output><input id="years" type="range" min="1" max="20" value="10"></label></div><div class="preview-grid" id="previewGrid" hidden><div><span id="originalLabel">원본 이미지</span><canvas id="originalCanvas"></canvas></div><div><span id="resultLabel">N년 떠돈 이미지</span><canvas id="resultCanvas"></canvas><button class="download" id="downloadButton" type="button">다운로드</button></div></div></section><footer><span>FreeUtil · <span id="footerText">간단하고 재미있는 이미지 도구</span></span><span id="privacyText">이미지는 브라우저 안에서만 처리됩니다.</span></footer></main><div class="toast" id="toast"></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="인터넷에서 N년 떠돈 짤 만들기. JPG 이미지를 업로드하고 오래된 인터넷 이미지처럼 변환해보세요.">
+  <title>Free Util · Meme Age</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> Free Util</div><span class="tool-tag">IMAGE TOOL</span></header>
+    <section class="hero"><p class="eyebrow">IMAGE · MEME AGE</p><h1 id="title">Meme Age</h1><p id="tagline">이미지를 업로드하고 인터넷을 오래 떠돈 것처럼 만들어보세요.</p></section>
+    <section class="workspace">
+      <div class="upload" id="dropZone"><input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp"><div class="upload-icon">↥</div><h2 id="uploadTitle">이미지를 업로드하세요</h2><p id="uploadHint">JPG, PNG, WebP · 브라우저에서만 처리됩니다</p><button id="uploadButton" type="button">이미지 선택</button></div>
+      <div class="controls" id="controls" hidden><label><span id="yearsLabel">인터넷에 떠돈 기간</span><output id="yearsValue">10년</output><input id="years" type="range" min="1" max="20" value="10"></label></div>
+      <div class="preview-grid" id="previewGrid" hidden><div><span id="originalLabel">원본 이미지</span><canvas id="originalCanvas"></canvas></div><div><span id="resultLabel">N년 떠돈 이미지</span><canvas id="resultCanvas"></canvas><button class="download" id="downloadButton" type="button">다운로드</button></div></div>
+    </section>
+    <footer><span>Free Util · <span id="footerText">간단하고 재미있는 이미지 도구</span></span><span id="privacyText">이미지는 브라우저 안에서만 처리됩니다.</span></footer>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
