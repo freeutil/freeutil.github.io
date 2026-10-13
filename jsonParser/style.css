@@ -8,3 +8,4 @@ footer{display:none}
 :root{--green:#2563eb}
 .workspace,.panel{border-color:#b9c6bf}.input-panel textarea,.output{border-color:#c1cec7}
 .workspace,.panel{border-color:#a7b8ae}.input-panel textarea,.output{border-color:#afc0b6}
+.hero p,.panel-foot,.tool-tag,footer{color:#68766e}.output.empty{color:#7d8981}.ghost-button,.clear-button,.tool-actions button{color:#6c7971}

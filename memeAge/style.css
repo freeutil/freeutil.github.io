@@ -14,3 +14,4 @@ footer{display:none}
 @media(max-width:650px){.controls label{width:100%}.controls input[type="range"]{width:100%;min-width:100%}}
 .workspace,.controls{border-color:#c3cec6}.upload{border-color:#aebfb2}.preview-grid canvas{border-color:#c3cec6}
 .workspace,.controls{border-color:#afc0b5}.upload{border-color:#98ae9e}.preview-grid canvas{border-color:#afc0b5}
+.top-note,.hero p:last-child,.upload p,.controls label,.preview-grid>div>span,footer{color:#64736c}
