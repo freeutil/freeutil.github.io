@@ -10,6 +10,6 @@
 .lotto-tool .lotto-balls i:first-child{background:#e8b83c;color:#fff}.lotto-tool .lotto-balls i:last-child{background:#8c9a9a;color:#fff}
 .brand{font-size:30px;letter-spacing:-.06em}.brand-mark{width:24px;height:24px}.tools{margin-top:28px}
 .tool-card{border-color:#c9cecb}
-.brand{gap:.5em}
+.brand{gap:.38em}
 .brand-mark{width:26px;height:26px;background:linear-gradient(#202124 0 0) 0 17px/9px 9px no-repeat,linear-gradient(#202124 0 0) 9px 9px/9px 9px no-repeat,linear-gradient(#202124 0 0) 17px 0/9px 9px no-repeat}
 .json-tool .tool-icon{letter-spacing:.1em}
