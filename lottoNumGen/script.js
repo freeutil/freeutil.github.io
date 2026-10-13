@@ -3,6 +3,8 @@ if(location.protocol==='file:'){const brand=document.querySelector('.brand');bra
 const numberSets = document.querySelector('#numberSets');
 const setCount = document.querySelector('#setCount');
 const toast = document.querySelector('#toast');
+const generateButton = document.querySelector('#generateButton');
+let hasGenerated = false;
 const colors = [{ max:10, className:'yellow' }, { max:20, className:'blue' }, { max:30, className:'red' }, { max:40, className:'gray' }, { max:45, className:'green' }];
 
 function colorFor(number) { return colors.find(color => number <= color.max).className; }
@@ -19,7 +21,9 @@ function render() {
 }
 async function copyNumbers(numbers) { const text = numbers.join(', '); try { await navigator.clipboard.writeText(text); } catch { const area = document.createElement('textarea'); area.value = text; document.body.append(area); area.select(); document.execCommand('copy'); area.remove(); } showToast(`${text} · 복사했어요`); }
 function showToast(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('show'), 2200); }
-document.querySelector('#generateButton').addEventListener('click', render);
-document.querySelector('#refreshButton').addEventListener('click', render);
-setCount.addEventListener('change', render);
-render();
+generateButton.addEventListener('click', () => {
+  render();
+  hasGenerated = true;
+  generateButton.querySelector('span').textContent = '다시 뽑기';
+});
+setCount.addEventListener('change', () => { if (hasGenerated) render(); });

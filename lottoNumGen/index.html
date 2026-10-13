@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <style>.hero h1{letter-spacing:-.03em}</style>
+    <style>.brand-mark{width:18px;height:18px;border-radius:0;background:linear-gradient(var(--green) 0 0) 0 12px/6px 6px no-repeat,linear-gradient(var(--green) 0 0) 6px 6px/6px 6px no-repeat,linear-gradient(var(--green) 0 0) 12px 0/6px 6px no-repeat}</style>
+    <style>.brand{gap:7px}</style>
   </head>
   <body>
     <main class="page-shell">
@@ -18,7 +21,6 @@
           <span class="brand-mark" aria-hidden="true"></span>
           <span>Free Util</span>
         </a>
-        <div class="top-note"><span class="status-dot"></span> 매주 토요일, 작은 설렘</div>
       </header>
 
       <section class="hero">
@@ -32,7 +34,6 @@
             <span class="mini-label">YOUR LUCKY NUMBERS</span>
             <h2 id="generator-title">행운 번호 생성</h2>
           </div>
-          <button class="icon-button" id="refreshButton" type="button" title="새 번호 뽑기" aria-label="새 번호 뽑기">↻</button>
         </div>
 
         <div id="numberSets" class="number-sets" aria-live="polite"></div>
@@ -47,14 +48,8 @@
               <option value="5">5줄</option>
             </select>
           </label>
-          <button class="primary-button" id="generateButton" type="button"><span>번호 뽑기</span><span class="button-arrow">→</span></button>
+          <button class="primary-button" id="generateButton" type="button"><span>번호 뽑기</span></button>
         </div>
-        <p class="disclaimer">※ 본 서비스는 재미를 위한 랜덤 번호 생성기입니다.</p>
-      </section>
-
-      <section class="tip-row">
-        <div class="tip-icon">☼</div>
-        <div><strong>작은 팁</strong><p>마음에 드는 조합은 번호 옆 복사 버튼으로 간직해보세요.</p></div>
       </section>
 
       <footer><span>행운은 준비된 마음에 찾아옵니다.</span><span>© lucky pick</span></footer>
