@@ -14,3 +14,5 @@
 .keypad button{font-size:22px;font-weight:900}.keypad .function{font-size:16px}.scientific-keys button{font-size:18px}
 .keypad .operator{font-family:Arial,sans-serif;font-weight:900;color:var(--ink)}.scientific-keys button{font-size:19px}
 .display{font-family:Arial,sans-serif}
+.calculator{border-color:#c4cec7}.display,.keypad button{border-color:#c3ccc6}
+.calculator{border-color:#afbeb5}.display,.keypad button{border-color:#aebcb3}

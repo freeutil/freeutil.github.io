@@ -24,3 +24,5 @@ footer{display:none}
 .primary-button:hover,.primary-button:focus,.primary-button:active{background:var(--green);color:#fff;transform:none;box-shadow:none}
 .number-set{background:#fff;border:1px solid #e8ddbd;box-shadow:0 1px 3px rgba(112,90,35,.04)}
 .brand{font-size:15px}
+.generator-card{border-color:#c4bda9}.number-set{border-color:#d8c797}.input-button,.count-control select{border-color:#c8c0aa}
+.generator-card{border-color:#b8af98}.number-set{border-color:#cbb778}.count-control select{border-color:#bdb39a}

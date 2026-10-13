@@ -6,3 +6,5 @@
 footer{display:none}
 .hero{padding:20px 5px 12px}.hero h1{margin:0;font-size:30px}
 :root{--green:#2563eb}
+.workspace,.panel{border-color:#b9c6bf}.input-panel textarea,.output{border-color:#c1cec7}
+.workspace,.panel{border-color:#a7b8ae}.input-panel textarea,.output{border-color:#afc0b6}
