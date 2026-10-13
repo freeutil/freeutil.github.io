@@ -6,3 +6,4 @@
 .hero{padding:36px 0 14px}.eyebrow{margin:0}
 .tool-card{--accent:#a16207;--accent-soft:#fdf3d8}.lotto-tool{--accent:#a16207;--accent-soft:#fdf3d8}.json-tool{--accent:#2563eb;--accent-soft:#e8efff}.meme-tool{--accent:#7c3aed;--accent-soft:#f1eaff}.tool-card:hover{border-color:var(--accent)}.tool-card>span:first-child{color:var(--accent)}.lotto-balls i{background:var(--accent-soft);color:var(--accent)}
 .lotto-tool .lotto-balls i:first-child{background:#e8b83c;color:#fff}.lotto-tool .lotto-balls i:last-child{background:#8c9a9a;color:#fff}
+.brand{font-size:30px;letter-spacing:-.06em}.brand-mark{width:24px;height:24px}.tools{margin-top:28px}
