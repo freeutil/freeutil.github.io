@@ -1,3 +1,4 @@
+const adsenseScript=document.createElement('script');adsenseScript.async=true;adsenseScript.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4401870717103583';adsenseScript.crossOrigin='anonymous';document.head.append(adsenseScript);
 const $=s=>document.querySelector(s);
 const input=$('#fileInput'),drop=$('#dropZone'),years=$('#years'),yearsValue=$('#yearsValue'),controls=$('#controls'),grid=$('#previewGrid'),original=$('#originalCanvas'),result=$('#resultCanvas'),downloadButton=$('#downloadButton');
 const divider=document.createElement('div');divider.className='comparison-divider';grid.append(divider);

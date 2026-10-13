@@ -1,3 +1,4 @@
+const adsenseScript=document.createElement('script');adsenseScript.async=true;adsenseScript.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4401870717103583';adsenseScript.crossOrigin='anonymous';document.head.append(adsenseScript);
 const numberSets = document.querySelector('#numberSets');
 const setCount = document.querySelector('#setCount');
 const toast = document.querySelector('#toast');
