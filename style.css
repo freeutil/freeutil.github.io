@@ -5,3 +5,4 @@
 .brand{display:flex;align-items:center;gap:8px;letter-spacing:-.03em;color:inherit;text-decoration:none}.brand-mark{display:inline-block;width:20px;height:20px;margin:0;border-radius:0;background:linear-gradient(#202124 0 0) 0 12px/8px 8px no-repeat,linear-gradient(#202124 0 0) 6px 6px/8px 8px no-repeat,linear-gradient(#202124 0 0) 12px 0/8px 8px no-repeat;color:transparent;font-size:0}
 .hero{padding:36px 0 14px}.eyebrow{margin:0}
 .tool-card{--accent:#a16207;--accent-soft:#fdf3d8}.lotto-tool{--accent:#a16207;--accent-soft:#fdf3d8}.json-tool{--accent:#2563eb;--accent-soft:#e8efff}.meme-tool{--accent:#7c3aed;--accent-soft:#f1eaff}.tool-card:hover{border-color:var(--accent)}.tool-card>span:first-child{color:var(--accent)}.lotto-balls i{background:var(--accent-soft);color:var(--accent)}
+.lotto-tool .lotto-balls i:first-child{background:#e8b83c;color:#fff}.lotto-tool .lotto-balls i:last-child{background:#8c9a9a;color:#fff}
