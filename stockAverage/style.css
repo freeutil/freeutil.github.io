@@ -2,3 +2,4 @@
 .brand{font-size:15px;gap:5px}.brand-mark{width:18px;height:18px;background:linear-gradient(var(--accent) 0 0) 0 12px/6px 6px no-repeat,linear-gradient(var(--accent) 0 0) 6px 6px/6px 6px no-repeat,linear-gradient(var(--accent) 0 0) 12px 0/6px 6px no-repeat}
 .calculator-card{border-color:#d1bdb3}.input-wrap,.result-card{border-color:#cfbdb3}.result-panel{border-color:#ddc8bf}
 .calculator-card{border-color:#c0a59a}.input-wrap,.result-card{border-color:#bea59b}.result-panel{border-color:#cfb2a6}
+.brand-mark{background:#e63946!important;clip-path:polygon(20% 0,40% 0,40% 20%,60% 20%,60% 0,80% 0,80% 20%,100% 20%,100% 60%,80% 60%,80% 80%,60% 80%,60% 100%,40% 100%,40% 80%,20% 80%,20% 60%,0 60%,0 20%,20% 20%);border-radius:0!important}
