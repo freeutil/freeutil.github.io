@@ -14,3 +14,6 @@
 .brand-mark{width:26px;height:26px;background:linear-gradient(#202124 0 0) 0 17px/9px 9px no-repeat,linear-gradient(#202124 0 0) 9px 9px/9px 9px no-repeat,linear-gradient(#202124 0 0) 17px 0/9px 9px no-repeat}
 .json-tool .tool-icon{letter-spacing:.1em}
 @media(max-width:380px){.tools{grid-template-columns:1fr}}
+.calculator-tool{--accent:#c2415a;--accent-soft:#f9e8ec;--hover:#fff7f8}
+.calculator-icon{display:grid!important;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;place-items:center;width:30px;height:30px;min-width:30px!important;padding:3px;border-radius:9px;background:var(--accent-soft);color:var(--accent)!important;font:800 13px/1 Arial,sans-serif!important;letter-spacing:0!important}.calculator-icon i{font-style:normal}
+.tool-card{border-color:#c7cfca}.lotto-tool{border-color:#d8c795}.text-tool{border-color:#b9d4cf}.json-tool{border-color:#b8c9ed}.meme-tool{border-color:#cfbfeb}.calculator-tool{border-color:#e2b9c2}

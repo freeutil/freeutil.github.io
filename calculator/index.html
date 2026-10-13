@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="일반 계산과 공학용 함수를 지원하는 무료 온라인 계산기입니다.">
+  <title>Free Util · 계산기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span> Free Util</a></header>
+    <section class="hero"><h1 id="title">계산기</h1><p id="tagline">일반 계산과 공학용 계산을 지원합니다.</p></section>
+    <section class="calculator" aria-label="Calculator">
+      <div class="mode-switch" role="tablist" aria-label="계산기 모드"><button class="mode active" id="standardMode" type="button" role="tab">일반</button><button class="mode" id="scientificMode" type="button" role="tab">공학용</button><button class="angle" id="angleMode" type="button">DEG</button></div>
+      <input id="display" class="display" type="text" inputmode="decimal" aria-label="계산식" readonly value="">
+      <div id="keypad" class="keypad standard-keys">
+        <button class="function" data-action="clear">AC</button><button class="function" data-action="delete">DEL</button><button class="operator" data-value="(">(</button><button class="operator" data-value=")">)</button>
+        <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button class="operator" data-value="÷">÷</button>
+        <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button class="operator" data-value="×">×</button>
+        <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button class="operator" data-value="−">−</button>
+        <button data-value="0" class="zero">0</button><button data-value=".">.</button><button class="operator" data-value="+">+</button><button class="equals" data-action="equals">=</button>
+      </div>
+      <div class="hint" id="error" role="status"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
