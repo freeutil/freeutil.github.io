@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="주식 물타기 계산기. 추가 매수 후 새로운 평균 매입단가와 목표 평단에 필요한 주식 수를 계산합니다.">
+  <title>Free Util · 주식 물타기 계산기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span><span>Free Util</span></a></header>
+    <section class="hero"><h1 id="title">주식 물타기 계산기</h1><p id="tagline">추가 매수 후 평단가와 목표 평단에 필요한 수량을 계산합니다.</p></section>
+    <section class="calculator-card" aria-label="Stock average calculator">
+      <div class="mode-switch" role="tablist" aria-label="계산 모드"><button class="mode active" id="averageMode" type="button" role="tab">새 평단 계산</button><button class="mode" id="targetMode" type="button" role="tab">목표 평단 역산</button></div>
+      <form id="averageForm" class="calc-form">
+        <div class="field-grid">
+          <label><span data-label="currentAverage">현재 평단가</span><span class="input-wrap"><input id="currentAverage" type="number" min="0" step="any" inputmode="decimal" placeholder="50,000"><em>원</em></span></label>
+          <label><span data-label="currentShares">현재 보유 수량</span><span class="input-wrap"><input id="currentShares" type="number" min="1" step="1" inputmode="numeric" placeholder="10"><em>주</em></span></label>
+          <label><span data-label="buyPrice">추가 매수 가격</span><span class="input-wrap"><input id="buyPrice" type="number" min="0" step="any" inputmode="decimal" placeholder="35,000"><em>원</em></span></label>
+          <label><span data-label="buyShares">추가 매수 수량</span><span class="input-wrap"><input id="buyShares" type="number" min="1" step="1" inputmode="numeric" placeholder="10"><em>주</em></span></label>
+          <label class="wide"><span data-label="marketPrice">현재 주가 <small>선택</small></span><span class="input-wrap"><input id="marketPrice" type="number" min="0" step="any" inputmode="decimal" placeholder="현재가를 입력하세요"><em>원</em></span></label>
+        </div>
+        <button class="primary-button" type="submit" id="averageButton">새 평단 계산</button>
+      </form>
+      <section class="result-panel" id="averageResult" aria-live="polite" hidden><div class="result-grid"><div class="result-card emphasis"><span data-result-label="newAverage">새 평단가</span><strong id="newAverage">-</strong></div><div class="result-card"><span data-result-label="totalShares">총 보유 수량</span><strong id="totalShares">-</strong></div><div class="result-card"><span data-result-label="totalInvestment">총 투자금</span><strong id="totalInvestment">-</strong></div><div class="result-card"><span data-result-label="recovery">현재가에서 본전까지</span><strong id="recovery">-</strong></div></div></section>
+      <form id="targetForm" class="calc-form" hidden>
+        <div class="field-grid">
+          <label><span data-label="targetAverageCurrent">현재 평단가</span><span class="input-wrap"><input id="targetCurrentAverage" type="number" min="0" step="any" inputmode="decimal" placeholder="50,000"><em>원</em></span></label>
+          <label><span data-label="targetCurrentShares">현재 보유 수량</span><span class="input-wrap"><input id="targetCurrentShares" type="number" min="1" step="1" inputmode="numeric" placeholder="10"><em>주</em></span></label>
+          <label><span data-label="targetAverage">목표 평단가</span><span class="input-wrap"><input id="targetAverage" type="number" min="0" step="any" inputmode="decimal" placeholder="42,000"><em>원</em></span></label>
+          <label><span data-label="targetBuyPrice">추가 매수 가격</span><span class="input-wrap"><input id="targetBuyPrice" type="number" min="0" step="any" inputmode="decimal" placeholder="35,000"><em>원</em></span></label>
+        </div>
+        <button class="primary-button" type="submit" id="targetButton">필요 수량 계산</button>
+      </form>
+      <section class="result-panel" id="targetResult" aria-live="polite" hidden><div class="result-grid"><div class="result-card emphasis"><span data-result-label="neededShares">필요한 추가 수량</span><strong id="neededShares">-</strong></div><div class="result-card"><span data-result-label="neededAmount">추가 투자금</span><strong id="neededAmount">-</strong></div><div class="result-card"><span data-result-label="targetTotalShares">매수 후 총 수량</span><strong id="targetTotalShares">-</strong></div><div class="result-card"><span data-result-label="actualAverage">실제 새 평단가</span><strong id="actualAverage">-</strong></div></div></section>
+      <p class="error" id="error" role="alert"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
