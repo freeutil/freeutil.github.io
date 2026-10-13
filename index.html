@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FreeUtil에서 제공하는 무료 웹 유틸리티 모음입니다. 로또 번호 생성기, JSON 파서, meme age를 브라우저에서 사용해보세요.">
+  <title>FreeUtil · 무료 웹 유틸리티</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> FreeUtil</div><span class="tool-tag">WEB UTILITIES</span></header>
+    <section class="hero">
+      <p class="eyebrow">FREEUTIL TOOLS</p>
+      <h1 id="title">간단하고 유용한 웹 도구</h1>
+      <p id="tagline">필요한 도구를 골라 브라우저에서 바로 사용해보세요.</p>
+    </section>
+    <section class="tools" aria-label="FreeUtil utilities">
+      <a class="tool-card" href="lottoNumGen/"><span class="icon">✦</span><span><strong id="lottoTitle">로또 번호 생성기</strong><small id="lottoDescription">로또 번호를 빠르게 만들어보세요.</small></span><span class="arrow">→</span></a>
+      <a class="tool-card" href="jsonParser/"><span class="icon">{ }</span><span><strong id="jsonTitle">JSON 파서</strong><small id="jsonDescription">JSON을 검증하고 보기 좋게 정리합니다.</small></span><span class="arrow">→</span></a>
+      <a class="tool-card" href="memeAge/"><span class="icon">◎</span><span><strong id="memeTitle">meme age</strong><small id="memeDescription">이미지를 오래된 인터넷 밈처럼 만들어보세요.</small></span><span class="arrow">→</span></a>
+    </section>
+    <footer>FreeUtil · <span id="footer">모든 처리는 브라우저에서 이루어집니다.</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
