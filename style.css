@@ -12,3 +12,4 @@
 .tool-card{border-color:#c9cecb}
 .brand{gap:.5em}
 .brand-mark{width:26px;height:26px;background:linear-gradient(#202124 0 0) 0 17px/9px 9px no-repeat,linear-gradient(#202124 0 0) 9px 9px/9px 9px no-repeat,linear-gradient(#202124 0 0) 17px 0/9px 9px no-repeat}
+.json-tool .tool-icon{letter-spacing:.1em}
