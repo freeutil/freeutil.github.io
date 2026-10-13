@@ -1,6 +1,6 @@
 const adsenseScript=document.createElement('script');adsenseScript.async=true;adsenseScript.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4401870717103583';adsenseScript.crossOrigin='anonymous';document.head.append(adsenseScript);
 const $=s=>document.querySelector(s);
-const input=$('#fileInput'),drop=$('#dropZone'),years=$('#years'),yearsValue=$('#yearsValue'),controls=$('#controls'),grid=$('#previewGrid'),original=$('#originalCanvas'),result=$('#resultCanvas'),downloadButton=$('#downloadButton'),changeImageButton=$('#changeImageButton');
+const input=$('#fileInput'),drop=$('#dropZone'),years=$('#years'),yearsValue=$('#yearsValue'),controls=$('#controls'),grid=$('#previewGrid'),original=$('#originalCanvas'),result=$('#resultCanvas'),downloadButton=$('#downloadButton'),changeImageButton=$('#changeImageButton'),toast=$('#toast');
 const divider=document.createElement('div');divider.className='comparison-divider';grid.append(divider);
 grid.parentNode.insertBefore(downloadButton,grid.nextSibling);
 let sourceCanvas=null,renderVersion=0,comparisonPosition=50;
@@ -9,6 +9,11 @@ const t=ko?{title:'인터넷에서 몇 년 떠돈 짤 만들기',tagline:'이미
 if(ko)t.title='Meme Age';
 if(ko)t.hint='지원 형식: JPG, PNG, WebP.<br>이미지 파일은 서버로 전송되지 않습니다.';
 t.change=ko?'이미지 변경':ja?'画像を変更':zh?'更换图片':'Change image';
+t.invalid=ko?'JPG, PNG, WebP 이미지만 사용할 수 있습니다.':ja?'JPG、PNG、WebP画像のみ使用できます。':zh?'只能使用 JPG、PNG 或 WebP 图片。':'Only JPG, PNG, and WebP images are supported.';
+const allowedTypes=new Set(['image/jpeg','image/png','image/webp']);
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove('show'),2200)}
+function rejectInvalidFile(event){const file=event.target===input?input.files[0]:event.dataTransfer?.files[0];if(file&&!allowedTypes.has(file.type)){event.preventDefault();event.stopImmediatePropagation();if(event.target===input)input.value='';showToast(t.invalid)}}
+input.addEventListener('change',rejectInvalidFile,true);drop.addEventListener('drop',rejectInvalidFile,true);
 document.documentElement.lang=ko?'ko':ja?'ja':zh?'zh':'en';
 if(location.protocol==='file:')$('.brand').href+='index.html';$('.brand').innerHTML='<span class="brand-mark" aria-hidden="true"></span> Free Util';for(const [id,key] of [['title','title'],['tagline','tagline'],['uploadTitle','upload'],['uploadButton','choose'],['yearsLabel','years'],['originalLabel','original'],['resultLabel','result'],['downloadButton','download'],['changeImageButton','change'],['footerText','footer'],['privacyText','privacy']])$(('#'+id)).childNodes[0].nodeValue=t[key];$('#uploadHint').innerHTML=t.hint.replace(' · ','<br>');document.title=`Free Util · ${t.title}`;
 function copyCanvas(canvas){const copy=document.createElement('canvas');copy.width=canvas.width;copy.height=canvas.height;copy.getContext('2d').drawImage(canvas,0,0);return copy}

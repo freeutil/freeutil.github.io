@@ -26,4 +26,8 @@ generateButton.addEventListener('click', () => {
   hasGenerated = true;
   generateButton.querySelector('span').textContent = '다시 뽑기';
 });
-setCount.addEventListener('change', () => { if (hasGenerated) render(); });
+setCount.addEventListener('change', () => {
+  render();
+  hasGenerated = true;
+  generateButton.querySelector('span').textContent = '다시 뽑기';
+});

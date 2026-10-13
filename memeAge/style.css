@@ -11,3 +11,4 @@ footer{display:none}
 .upload[hidden]{display:none}
 :root{--green:#7c3aed}
 .download{background:var(--green)}
+@media(max-width:650px){.controls label{width:100%}.controls input[type="range"]{width:100%;min-width:100%}}
