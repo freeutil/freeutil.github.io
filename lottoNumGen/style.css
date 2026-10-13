@@ -1,4 +1,4 @@
-:root { --ink:#22312c; --muted:#81908a; --cream:#f7f5ef; --card:#fffdf8; --mint:#d9f1df; --green:#25714e; --line:#e8e6de; }
+:root { --ink:#22312c; --muted:#81908a; --cream:#f7f5ef; --card:#fffdf8; --mint:#f7ebca; --green:#a16207; --line:#e8e6de; }
 * { box-sizing:border-box; }
 body { margin:0; min-width:320px; color:var(--ink); background:#f4f6f1; font-family:Manrope,'Gowun Dodum',sans-serif; }
 .page-shell { max-width:760px; min-height:100vh; margin:auto; padding:26px 28px 28px; background:var(--cream); }
@@ -16,3 +16,5 @@ body { margin:0; min-width:320px; color:var(--ink); background:#f4f6f1; font-fam
 .hero{padding:42px 8px 28px}@media(max-width:520px){.hero{padding:34px 5px 24px}}
 .hero{padding:26px 8px 18px}.hero h1{margin:7px 0 8px;font-size:clamp(30px,4vw,40px)}.hero p{font-size:13px;line-height:1.5}@media(max-width:520px){.hero{padding:22px 5px 16px}.hero h1{font-size:30px}}
 .brand{color:inherit;text-decoration:none}.brand-mark{display:inline-block;width:20px;height:20px;border-radius:0;background:linear-gradient(#202124 0 0) 0 12px/8px 8px no-repeat,linear-gradient(#202124 0 0) 6px 6px/8px 8px no-repeat,linear-gradient(#202124 0 0) 12px 0/8px 8px no-repeat;color:transparent;font-size:0}
+footer{display:none}
+.hero h1{margin-top:0}
