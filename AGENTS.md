@@ -17,6 +17,7 @@
 
 - 유틸리티마다 프로젝트 루트에 독립 디렉토리를 만든다.
 - 새 유틸리티를 추가할 때는 루트 페이지 `index.html`의 바로가기 목록과 `script.js`의 다국어 도구 목록도 함께 갱신한다.
+- 새 유틸리티를 추가하거나 기존 도구의 공개 경로를 변경할 때는 루트 `sitemap.xml`에도 절대 URL을 함께 추가·수정한다.
 - 디렉토리명은 짧은 영문 또는 camelCase를 사용한다. 예: `lottoNumGen`, `jsonParser`, `memeAge`.
 - 기본 구성은 `index.html`, `style.css`, `script.js`다.
 - 유틸리티는 다른 유틸리티의 CSS와 JavaScript에 의존하지 않는다.
