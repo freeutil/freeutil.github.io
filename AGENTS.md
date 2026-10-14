@@ -69,4 +69,5 @@
 - `memeAge`: 인터넷에서 몇 년 떠돈 짤 만들기
 - `calculator`: 일반·공학용 계산기
 - `stockAverage`: 주식 물타기·평단가 계산기
+- `paint`: 브라우저 그림판
 

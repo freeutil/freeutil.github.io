@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="브라우저에서 간단한 그림을 그리고 이미지를 열고 PNG로 저장하는 온라인 그림판입니다.">
+  <title>Free Util · 그림판</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://freeutil.github.io/paint/">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span><span>Free Util</span></a></header>
+    <section class="hero"><h1 id="title">그림판</h1><p id="tagline">간단한 그림을 그리고 이미지로 저장합니다.</p></section>
+    <section class="paint-card" aria-label="Paint">
+      <div class="file-bar"><button id="openButton" type="button">열기</button><button id="saveButton" type="button">저장</button><span class="file-spacer"></span><button id="undoButton" type="button" aria-label="실행 취소">↶</button><button id="redoButton" type="button" aria-label="다시 실행">↷</button><button id="clearButton" type="button">새로 만들기</button><input id="fileInput" type="file" accept="image/*" hidden></div>
+      <div class="tool-row" role="toolbar" aria-label="그림 도구">
+        <div class="tool-group"><button class="tool active" data-tool="pencil" type="button">연필</button><button class="tool" data-tool="brush" type="button">붓</button><button class="tool" data-tool="eraser" type="button">지우개</button><button class="tool" data-tool="picker" type="button">스포이드</button></div>
+        <div class="tool-group"><button class="tool" data-tool="line" type="button">선</button><button class="tool" data-tool="rect" type="button">사각형</button><button class="tool" data-tool="ellipse" type="button">원</button><button class="tool" data-tool="fill" type="button">채우기</button></div>
+        <label class="size-control" for="sizeSelect">굵기<select id="sizeSelect"><option value="2">얇게</option><option value="5" selected>보통</option><option value="10">굵게</option><option value="20">아주 굵게</option></select></label>
+        <label class="color-control" for="colorInput">색상<input id="colorInput" type="color" value="#202124"></label>
+      </div>
+      <div class="palette" aria-label="색상 팔레트"><button type="button" data-color="#202124" style="--swatch:#202124" aria-label="검정"></button><button type="button" data-color="#ffffff" style="--swatch:#ffffff" aria-label="흰색"></button><button type="button" data-color="#e63946" style="--swatch:#e63946" aria-label="빨강"></button><button type="button" data-color="#f59e0b" style="--swatch:#f59e0b" aria-label="노랑"></button><button type="button" data-color="#3b82f6" style="--swatch:#3b82f6" aria-label="파랑"></button><button type="button" data-color="#22a06b" style="--swatch:#22a06b" aria-label="초록"></button><button type="button" data-color="#8b5cf6" style="--swatch:#8b5cf6" aria-label="보라"></button><button type="button" data-color="#f97316" style="--swatch:#f97316" aria-label="주황"></button></div>
+      <div class="canvas-wrap"><canvas id="canvas" width="1200" height="800" aria-label="그림판 캔버스"></canvas></div>
+      <p class="status" id="status" role="status">캔버스에 그림을 그려보세요.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
