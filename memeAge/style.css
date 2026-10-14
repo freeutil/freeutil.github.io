@@ -15,3 +15,4 @@ footer{display:none}
 .workspace,.controls{border-color:#c3cec6}.upload{border-color:#aebfb2}.preview-grid canvas{border-color:#c3cec6}
 .workspace,.controls{border-color:#afc0b5}.upload{border-color:#98ae9e}.preview-grid canvas{border-color:#afc0b5}
 .top-note,.hero p:last-child,.upload p,.controls label,.preview-grid>div>span,footer{color:#64736c}
+.info-content{margin-top:20px;padding:18px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0;padding-left:20px}

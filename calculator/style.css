@@ -17,4 +17,5 @@
 .calculator{border-color:#c4cec7}.display,.keypad button{border-color:#c3ccc6}
 .calculator{border-color:#afbeb5}.display,.keypad button{border-color:#aebcb3}
 .brand-mark{background:#e63946!important;clip-path:polygon(20% 0,40% 0,40% 20%,60% 20%,60% 0,80% 0,80% 20%,100% 20%,100% 60%,80% 60%,80% 80%,60% 80%,60% 100%,40% 100%,40% 80%,20% 80%,20% 60%,0 60%,0 20%,20% 20%);border-radius:0!important}
+.info-content{margin-top:20px;padding:18px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0 0 8px;padding-left:20px}.info-content details{margin-top:12px}.info-content summary{color:var(--ink);font-weight:700;cursor:pointer}.info-content details p{margin:7px 0 0}
 .hero p,.mode,.angle{color:#66756d}.hint{color:#b14e43}

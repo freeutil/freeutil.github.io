@@ -27,3 +27,4 @@ footer{display:none}
 .generator-card{border-color:#c4bda9}.number-set{border-color:#d8c797}.input-button,.count-control select{border-color:#c8c0aa}
 .generator-card{border-color:#b8af98}.number-set{border-color:#cbb778}.count-control select{border-color:#bdb39a}
 .top-note,.hero p{color:#5f6d65}.count-control,.disclaimer{color:#707b74}.set-label,.copy-button{color:#7f8982}.tip-row{color:#5d6b63}.tip-row strong{color:#59665f}
+.info-content{margin-top:20px;padding:18px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0;padding-left:20px}

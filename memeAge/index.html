@@ -26,6 +26,7 @@
       <div class="controls" id="controls" hidden><label><span id="yearsLabel">인터넷에 떠돈 기간</span><output id="yearsValue">10년</output><input id="years" type="range" min="1" max="20" value="10"></label><button class="change-image" id="changeImageButton" type="button">이미지 변경</button></div>
       <div class="preview-grid" id="previewGrid" hidden><div><span id="originalLabel">원본 이미지</span><canvas id="originalCanvas"></canvas></div><div><span id="resultLabel">N년 떠돈 이미지</span><canvas id="resultCanvas"></canvas><button class="download" id="downloadButton" type="button">다운로드</button></div></div>
     </section>
+    <section class="info-content"><h2>Meme Age 사용법</h2><p>이미지를 올린 뒤 슬라이더로 인터넷에 오래 떠돈 기간을 선택하면 해상도와 JPEG 압축 정도가 달라진 결과를 비교할 수 있습니다.</p><ol><li>JPG, PNG 또는 WebP 이미지를 선택합니다.</li><li>기간 슬라이더를 움직여 원하는 변화를 찾습니다.</li><li>결과 이미지를 다운로드합니다.</li></ol><h2>변환 방식</h2><p>원본 이미지는 서버에 업로드하지 않고 브라우저의 캔버스에서 처리합니다. 선택한 기간이 길수록 오래 저장하거나 여러 번 공유한 이미지처럼 보이도록 변환 강도가 커집니다.</p></section>
     <footer><span>Free Util · <span id="footerText">간단하고 재미있는 이미지 도구</span></span><span id="privacyText">이미지는 브라우저 안에서만 처리됩니다.</span></footer>
   </main>
   <div class="toast" id="toast"></div>

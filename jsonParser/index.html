@@ -34,6 +34,7 @@
       <div id="message" class="message" role="status"></div>
       <div class="panel output-panel"><div class="panel-head"><div><span class="panel-label">RESULT</span><h2>Parsed JSON</h2></div><div class="output-actions"><button class="ghost-button" id="formatButton" type="button" disabled>Format</button><button class="ghost-button" id="minifyButton" type="button" disabled>Minify</button><button class="ghost-button" id="copyButton" type="button">Copy result</button></div></div><div id="output" class="output empty">Parse JSON to see the result.</div></div>
     </section>
+    <section class="info-content"><h2>JSON 파서 사용법</h2><p>JSON을 입력하면 유효성을 확인하고 들여쓰기가 적용된 보기 좋은 형식 또는 한 줄 압축 형식으로 변환할 수 있습니다.</p><ol><li>JSON이나 데이터베이스에서 복사한 문자열을 입력창에 붙여넣습니다.</li><li><strong>Format</strong>으로 구조를 확인하거나 <strong>Minify</strong>로 공백을 줄입니다.</li><li>결과를 복사해 필요한 곳에 사용합니다.</li></ol><h2>자주 확인하는 오류</h2><p>키와 문자열에는 큰따옴표가 필요하고, 마지막 항목 뒤의 쉼표는 제거해야 합니다. 이 도구는 입력한 내용을 현재 브라우저에서 처리합니다.</p><details><summary>문자열로 감싼 JSON도 처리할 수 있나요?</summary><p>네. 따옴표로 감싼 JSON 문자열을 붙여넣어도 내부 JSON 구조를 인식해 보기 좋게 표시합니다.</p></details></section>
     <footer><span>Free Util · Simple, useful web tools</span><span>JSON is processed in your browser.</span></footer>
   </main>
   <div id="toast" class="toast"></div>

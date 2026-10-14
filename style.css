@@ -24,3 +24,4 @@
 .paint-tool{--accent:#3f7d6a;--accent-soft:#e5f3ed;--hover:#f2fbf7;border-color:#9cc2b3}.paint-icon{font-size:20px!important}
 .brand-mark{background:#e63946!important;clip-path:polygon(20% 0,40% 0,40% 20%,60% 20%,60% 0,80% 0,80% 20%,100% 20%,100% 60%,80% 60%,80% 80%,60% 80%,60% 100%,40% 100%,40% 80%,20% 80%,20% 60%,0 60%,0 20%,20% 20%);border-radius:0!important}
 .hero p{color:#5f6862}.tool-card small{color:#5f6862}.tool-tag,.eyebrow{color:#69736d}
+.site-intro{padding:34px 0 8px}.site-intro h1{margin:0 0 10px;font-size:28px;letter-spacing:-.06em}.site-intro p{margin:5px 0;color:#5f6862;font-size:13px;line-height:1.65}.site-footer{display:flex;gap:14px;margin-top:24px;padding:14px 2px 0;border-top:1px solid #dfe3df;font-size:11px}.site-footer a{color:#69736d;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media(max-width:380px){.site-intro{padding-top:26px}.site-intro h1{font-size:25px}.site-footer{gap:10px;flex-wrap:wrap}}
