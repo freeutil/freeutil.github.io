@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="터미널 Vim에서 자주 사용하는 모드별 단축키를 검색하고 복사할 수 있는 무료 도구입니다.">
+  <title>Free Util · Vim 단축키</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://freeutil.github.io/vimShortcuts/">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span> Free Util</a></header>
+    <section class="hero"><h1 id="title">Vim 단축키</h1><p id="tagline">터미널 Vim에서 자주 쓰는 명령을 모드별로 확인하세요.</p></section>
+    <section class="shortcut-card" aria-label="Vim shortcuts">
+      <div class="mode-guide" aria-label="Vim 모드 설명"><strong id="modeGuideTitle">모드</strong><span><b>N</b> Normal</span><span><b>I</b> Insert</span><span><b>V</b> Visual</span><span><b>:</b> Command</span></div>
+      <div class="controls"><label class="search-box"><span class="sr-only" id="searchLabel">단축키 검색</span><input id="searchInput" type="search" placeholder="동작 또는 키 검색"></label><button id="copyVisible" type="button">표시된 명령 복사</button></div>
+      <div class="categories" role="tablist" aria-label="Vim 단축키 카테고리"><button class="category active" data-category="all" type="button">전체</button><button class="category" data-category="normal" type="button">Normal</button><button class="category" data-category="insert" type="button">Insert</button><button class="category" data-category="visual" type="button">Visual</button><button class="category" data-category="command" type="button">Command</button><button class="category" data-category="motion" type="button">이동·편집</button></div>
+      <div class="table-wrap"><table><thead><tr><th scope="col" id="shortcutHead">명령</th><th scope="col" id="actionHead">동작</th><th scope="col"><span class="sr-only">복사</span></th></tr></thead><tbody id="shortcutRows"></tbody></table><p class="empty" id="emptyState" hidden>검색 결과가 없습니다.</p></div>
+    </section>
+    <section class="info-content"><h2 id="guideTitle">Vim 단축키 사용법</h2><p id="guideText">Vim은 현재 모드에 따라 같은 키의 동작이 달라집니다. Normal 모드에서 <kbd>i</kbd>를 누르면 Insert 모드로 들어가고, <kbd>Esc</kbd>로 다시 Normal 모드로 돌아옵니다.</p><h2>Vim 버전과 기능 구성</h2><p>Linux 배포판이나 macOS에 기본 설치된 Vim은 <strong>tiny</strong>, <strong>normal</strong>, <strong>huge</strong> 빌드 중 하나일 수 있습니다. 빌드에 따라 일부 플러그인·스크립트·외부 언어 연동 기능이 제한될 수 있습니다.</p><p><kbd>vim --version</kbd> 또는 Vim 안에서 <kbd>:version</kbd>을 실행하면 현재 버전과 활성화된 기능을 확인할 수 있습니다.</p><h2>vi와 Vim의 차이</h2><p>Vim은 vi의 기본 조작과 명령을 대부분 이어받은 확장판입니다. Visual 모드, 다중 실행 취소, 문법 강조, 플러그인, 다양한 검색·편집 기능 등 Vim에 추가된 기능은 순수 vi나 호환 모드에서 사용할 수 없을 수 있습니다. 기본 이동·입력·저장 명령은 대체로 공통이지만, 사용하는 프로그램이 vi인지 Vim인지 먼저 확인하세요.</p></section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

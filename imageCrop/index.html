@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="이미지의 상하좌우를 드래그해 원하는 영역을 자르고 픽셀 크기를 확인한 뒤 다운로드하는 무료 이미지 자르기 도구입니다.">
+  <title>Free Util · 이미지 자르기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://freeutil.github.io/imageCrop/">
+</head>
+<body><main class="shell">
+  <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span> Free Util</a></header>
+  <section class="hero"><h1 id="title">이미지 자르기</h1><p id="tagline">원하는 영역을 드래그해 픽셀 크기를 확인하고 잘라보세요.</p></section>
+  <section class="crop-card" aria-label="Image cropper">
+    <div class="file-bar"><button class="primary-button" id="openButton" type="button">이미지 선택</button><button class="secondary-button" id="resetButton" type="button" disabled>원본으로</button><span class="file-spacer"></span><span class="image-dimension" id="imageDimension"></span><input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden></div>
+    <div class="empty-state" id="emptyState"><strong id="emptyTitle">이미지를 선택하세요</strong><span id="emptyText">JPG, PNG, WebP 이미지를 불러와 원하는 영역을 지정할 수 있습니다.</span></div>
+    <div class="editor" id="editor" hidden>
+      <div class="canvas-stage"><canvas id="imageCanvas" width="1" height="1" aria-label="이미지 자르기 영역"></canvas></div>
+      <div class="selection-bar"><span id="selectionLabel">선택 영역</span><strong id="selectionSize">0 × 0 px</strong><span class="selection-position" id="selectionPosition">X 0 · Y 0</span></div>
+      <div class="editor-actions"><button class="download-button" id="downloadButton" type="button" disabled>자른 이미지 다운로드</button></div>
+    </div>
+  </section>
+  <section class="info-content"><h2 id="guideTitle">이미지 자르기 사용법</h2><p id="guideText">이미지를 불러온 뒤 선택 영역의 가장자리나 모서리를 드래그하세요. 선택 영역 안쪽을 드래그하면 위치를 옮길 수 있고, 아래에서 실제 픽셀 크기를 확인할 수 있습니다.</p><h2 id="privacyTitle">처리 방식</h2><p id="privacyText">이미지는 브라우저의 캔버스에서 처리되며 외부 서버에 업로드하지 않습니다. 잘라낸 결과는 PNG 파일로 저장됩니다.</p></section>
+</main><script src="script.js"></script></body>
+</html>

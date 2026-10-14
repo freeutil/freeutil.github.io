@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="macOS에서 자주 사용하는 맥 단축키를 카테고리별 표로 확인하고 복사할 수 있는 도구입니다.">
+  <title>Free Util · 맥 단축키</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://freeutil.github.io/macShortcuts/">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span> Free Util</a></header>
+    <section class="hero"><h1 id="title">맥 단축키</h1><p id="tagline">자주 쓰는 macOS 키보드 단축키를 한눈에 확인하세요.</p></section>
+    <section class="shortcut-card" aria-label="macOS shortcuts">
+      <div class="key-guide" aria-label="보조 키 설명"><strong id="keyGuideTitle">보조 키</strong><span><b>⌘</b> Command</span><span><b>⌥</b> Option</span><span><b>⌃</b> Control</span><span><b>⇧</b> Shift</span><span><b>Fn</b> Function</span></div>
+      <div class="controls"><label class="search-box"><span class="sr-only" id="searchLabel">단축키 검색</span><input id="searchInput" type="search" placeholder="동작 또는 키 검색"></label><button id="copyVisible" type="button">표시된 단축키 복사</button></div>
+      <div class="categories" role="tablist" aria-label="단축키 카테고리"><button class="category active" data-category="all" type="button">전체</button><button class="category" data-category="basic" type="button">기본</button><button class="category" data-category="text" type="button">텍스트</button><button class="category" data-category="window" type="button">창·앱</button><button class="category" data-category="finder" type="button">Finder</button><button class="category" data-category="system" type="button">시스템</button></div>
+      <div class="table-wrap"><table><thead><tr><th scope="col" id="shortcutHead">단축키</th><th scope="col" id="actionHead">동작</th><th scope="col"><span class="sr-only">복사</span></th></tr></thead><tbody id="shortcutRows"></tbody></table><p class="empty" id="emptyState" hidden>검색 결과가 없습니다.</p></div>
+    </section>
+    <section class="info-content"><h2 id="guideTitle">맥 단축키 사용법</h2><p id="guideText">단축키는 보조 키를 누른 상태에서 마지막 키를 누르면 실행됩니다. 앱이나 키보드 배열, macOS 설정에 따라 일부 단축키가 다를 수 있으므로 메뉴에 표시된 단축키를 함께 확인하세요.</p><h2 id="sourceTitle">참고</h2><p><a href="https://support.apple.com/ko-kr/guide/mac-help/mchld6b9e240/mac" target="_blank" rel="noopener" id="sourceLink">Apple 공식 Mac 키보드 단축키 안내</a></p></section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
