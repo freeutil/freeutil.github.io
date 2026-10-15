@@ -3,3 +3,4 @@
 .workspace,textarea,.stats>div{border-color:#aec8c1}
 .hero p,.privacy,.toolbar,.stats span{color:#64736c}.toolbar button{color:#68766e}
 .info-content{margin-top:20px;padding:18px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0;padding-left:20px}
+.related-info{margin-top:18px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft,#fafafa);color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}.related-info summary{color:var(--ink);font-weight:700;cursor:pointer}.related-info[open] summary{margin-bottom:10px}.related-info p{margin:0}.related-info p+p{margin-top:10px}

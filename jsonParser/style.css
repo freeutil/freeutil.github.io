@@ -12,3 +12,4 @@ footer{display:none}
 .panel{overflow:hidden}
 .output{border-radius:0 0 12px 12px;scrollbar-gutter:stable}
 .info-content{margin:18px 2px 0;padding-top:16px;border-top:1px solid var(--line);color:#68766e;font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0 0 8px;padding-left:20px}.info-content details{margin-top:12px}.info-content summary{color:var(--ink);font-weight:700;cursor:pointer}.info-content details p{margin-top:7px}
+.related-info{margin-top:18px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft,#fafafa);color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}.related-info summary{color:var(--ink);font-weight:700;cursor:pointer}.related-info[open] summary{margin-bottom:10px}.related-info p{margin:0}.related-info p+p{margin-top:10px}
