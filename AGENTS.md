@@ -76,4 +76,5 @@
 - `windowsShortcuts`: Windows 11 단축키 표
 - `imageCrop`: 브라우저 이미지 자르기
 - `vimShortcuts`: 터미널 Vim 단축키 표
+- `calorieGuide`: 음식 칼로리와 권장량 계산 도구
 
