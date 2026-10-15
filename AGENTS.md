@@ -77,4 +77,5 @@
 - `imageCrop`: 브라우저 이미지 자르기
 - `vimShortcuts`: 터미널 Vim 단축키 표
 - `calorieGuide`: 음식 칼로리와 권장량 계산 도구
+- `ladderGame`: 참여 인원 중 한 명을 뽑는 독박 사다리 게임
 
