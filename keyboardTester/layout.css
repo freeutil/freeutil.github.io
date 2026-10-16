@@ -7,8 +7,26 @@
 .mac-row{display:none}
 html[data-os=mac] .windows-row{display:none}
 html[data-os=mac] .mac-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 5fr 1fr 1fr}
-.unsupported-device{padding:22px 18px;border:1px solid #a9bfda;border-radius:15px;background:#edf4fb;color:var(--muted)}.unsupported-device h2{margin:0 0 7px;color:var(--ink);font-size:18px}.unsupported-device p{margin:0;font-size:13px}.mobile-unsupported .tester-card,.mobile-unsupported .related-info{display:none}
-@media(max-width:560px){.shell{width:calc(100% - 24px)}.toolbar-right{width:100%;align-items:flex-start;justify-content:space-between;gap:10px}.keyboard{min-width:1080px}}
+@media(max-width:560px){
+  .shell{width:calc(100% - 24px)}
+  .toolbar-right{width:100%;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .os-picker{flex:none;white-space:nowrap}
+  .test-summary{width:auto;flex-wrap:wrap;gap:10px}
+  .keyboard{width:100%;min-width:0;padding:6px;border-radius:9px}
+  .keyboard-wrap{margin-inline:0}
+  .key-row{gap:2px;margin-bottom:3px}
+  .key{height:clamp(22px,5.5vw,30px);padding:0;font-size:clamp(6px,1.6vw,9px);border-radius:3px}
+  .key small{font-size:clamp(5px,1.2vw,7px)}
+  .key-mod,.key-backspace,.key-caps,.key-numpad-enter,#numLockKey{font-size:clamp(5px,1.2vw,7px)}
+  .keyboard-lower{gap:5px;margin-top:12px}
+  .nav-block,.arrow-block{grid-template-rows:repeat(2,clamp(22px,5.5vw,30px));gap:3px}
+  .numpad{grid-template-rows:repeat(5,clamp(22px,5.5vw,30px));gap:3px}
+  .key-plus,.key-numpad-enter{height:auto;align-self:stretch}
+  .mac-row .key[data-code^="Meta"],.mac-row .key[data-code^="Alt"],.mac-row .key[data-code="ControlLeft"]{font-size:0}
+  .mac-row .key[data-code^="Meta"]::after{content:'⌘';font-size:clamp(8px,2.2vw,12px)}
+  .mac-row .key[data-code^="Alt"]::after{content:'⌥';font-size:clamp(8px,2.2vw,12px)}
+  .mac-row .key[data-code="ControlLeft"]::after{content:'Ctrl';font-size:clamp(5px,1.2vw,7px)}
+}
 html[data-os=mac] .keyboard{border-color:#b5d1b8;background:linear-gradient(145deg,#f0f8f0,#e2f0e3);box-shadow:inset 0 -8px 18px #6f9f7626}
 html[data-os=mac] .key{border-color:#b5d1b8;background:#fbfffb;color:#3f5c45;box-shadow:0 2px 0 #9dbb9f}
 html[data-os=mac] .key.active{border-color:#70ad78;background:#78b982;color:#fff;box-shadow:0 0 0 3px #70ad782b,0 1px 0 #4d8d57}

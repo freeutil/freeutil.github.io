@@ -10,4 +10,4 @@
 .controller-shell[data-layout=switch] .center-button{font-size:14px}
 .controller-shell[data-layout=playstation] .center-button{font-size:9px;letter-spacing:-.04em}
 .related-info p+p{margin-top:12px}
-.stick-knob{z-index:1}
+.stick-knob{z-index:1;left:50%;top:50%;translate:-50% -50%}
