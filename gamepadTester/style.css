@@ -11,3 +11,15 @@
 .controller-shell[data-layout=playstation] .center-button{font-size:9px;letter-spacing:-.04em}
 .related-info p+p{margin-top:12px}
 .stick-knob{z-index:1;left:50%;top:50%;translate:-50% -50%}
+.device-picker[hidden]{display:none}
+@media(max-width:560px){
+  .layout-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;border-radius:12px}
+  .layout-button{min-width:0;height:auto;min-height:30px;padding:6px 4px;line-height:1.4;overflow-wrap:anywhere;border-radius:8px}
+  .controller-face{grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr)}
+  .center-buttons{flex-direction:column;align-items:center}
+  .dpad,.face-buttons{transform:scale(.72)}
+  .tester-actions{flex-wrap:wrap}
+  .action-button{min-width:0;height:auto;min-height:36px;padding:8px 12px;line-height:1.4;overflow-wrap:anywhere}
+  .device-picker select{min-width:0}
+  .input-cell{min-width:0;overflow-wrap:anywhere}
+}
