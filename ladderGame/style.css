@@ -20,4 +20,8 @@
 .participant-explosion{overflow:visible;pointer-events:none}.participant-burst{transform-box:fill-box;transform-origin:center;animation:participant-burst .72s cubic-bezier(.2,.8,.3,1) forwards}.participant-ring{fill:none;stroke:#8b5cf6;stroke-width:1.4;animation:participant-ring .72s ease-out forwards}.participant-core{fill:#fff;stroke:#8b5cf6;stroke-width:.65}.participant-fragment{stroke:#c084fc;stroke-width:1.2;stroke-linecap:round;animation:participant-fragment .62s ease-out forwards}@keyframes participant-burst{0%{opacity:1;transform:scale(.35)}35%{opacity:1;transform:scale(1.15)}100%{opacity:0;transform:scale(1.55)}}@keyframes participant-ring{0%{opacity:1;r:2}100%{opacity:0;r:10}}@keyframes participant-fragment{0%{opacity:1;stroke-width:1.5}100%{opacity:0;stroke-width:.35}}
 .ladder-vertical,.ladder-horizontal{stroke:#9672bb;opacity:1}
 .ladder-horizontal{fill:none}
+/* Keep translated result labels inside the same circles as participant numbers. */
+.bottom-labels span{display:flex;align-items:center;justify-content:center;padding:2px 3px;text-align:center;font-size:9px;line-height:1.05;overflow-wrap:normal;hyphens:manual}
+.bottom-labels span.target{display:block;align-content:center;padding:0;font-size:8px;line-height:10px}
+.bottom-labels[data-locale="ja"] span.target{font-size:7.5px;overflow-wrap:anywhere;line-break:strict}
 .ladder-path-glow{stroke-width:4.8;opacity:.12;filter:blur(4px)}.ladder-path{stroke-width:1.8;filter:drop-shadow(0 0 1px #f0a928)}.fuse-ember{fill:#fff8c7;stroke:#f0a928;stroke-width:.65;filter:drop-shadow(0 0 2px #fff1a8) drop-shadow(0 0 4px #f0a928);animation:fuse-flicker .12s ease-in-out infinite alternate}@keyframes fuse-flicker{from{opacity:.72}to{opacity:1}}

@@ -5,7 +5,14 @@ function previewPlayerLimit(){const width=numberPreview.clientWidth||420,gap=par
 function clampPlayers(){const limit=previewPlayerLimit(),value=Number(playerCount.value);playerCount.max=limit;players=Math.max(2,Math.min(limit,Number.isFinite(value)&&value>=2?Math.round(value):players));playerCount.value=players;startButton.disabled=false}
 function syncPlayerInput(){const limit=previewPlayerLimit(),raw=playerCount.value.trim(),value=Number(raw),valid=raw!==''&&Number.isInteger(value)&&value>=2&&value<=limit;playerCount.max=limit;startButton.disabled=!valid;if(valid&&value!==players){players=value;renderNumbers()}}
 function renderNumbers(){numberPreview.innerHTML=Array.from({length:players},(_,index)=>`<span>${index+1}</span>`).join('');const language=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('freeutil-language')||navigator.language||'en').toLowerCase();numberPreview.setAttribute('aria-label',language.startsWith('ko')?`${players}명 번호 미리보기`:language.startsWith('ja')?`${players}人の参加番号プレビュー`:language.startsWith('zh')?`${players}人参与编号预览`:`Participant number preview: ${players}`)}
-function renderLabels(reveal=false){const topHtml=Array.from({length:players},(_,index)=>{const palette=participantPalette[index%participantPalette.length];return`<span class="participant participant-${index%participantPalette.length}" style="background:${palette[0]};border-color:${palette[1]};color:${palette[2]}">${index+1}</span>`}).join('');const bottomHtml=Array.from({length:players},(_,index)=>{const isTarget=index===targetBottom;return`<span class="${reveal?(isTarget?'target':'safe'):''}">${reveal?(isTarget?'독박':'면제'):'?'}</span>`}).join('');topLabels.innerHTML=topHtml;bottomLabels.innerHTML=bottomHtml;topLabels.style.setProperty('--players',players);bottomLabels.style.setProperty('--players',players)}
+function renderLabels(reveal=false){
+ const language=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('freeutil-language')||navigator.language||'en').toLowerCase();
+ const locale=['ko','ja','zh'].find(code=>language.startsWith(code))||'en';
+ const labels={ko:['독박','면제'],en:['Pen<br>alty','Safe'],ja:['罰ゲーム','免除'],zh:['惩罚<br>对象','安全']}[locale];
+ const topHtml=Array.from({length:players},(_,index)=>{const palette=participantPalette[index%participantPalette.length];return`<span class="participant participant-${index%participantPalette.length}" style="background:${palette[0]};border-color:${palette[1]};color:${palette[2]}">${index+1}</span>`}).join('');
+ const bottomHtml=Array.from({length:players},(_,index)=>{const isTarget=index===targetBottom;return`<span class="${reveal?(isTarget?'target':'safe'):''}">${reveal?labels[isTarget?0:1]:'?'}</span>`}).join('');
+ topLabels.innerHTML=topHtml;bottomLabels.innerHTML=bottomHtml;bottomLabels.dataset.locale=locale;topLabels.style.setProperty('--players',players);bottomLabels.style.setProperty('--players',players);
+}
 function makeRungs(){
   const rows=Math.max(12,Math.min(22,players+9));
   rungs=[];
