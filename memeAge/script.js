@@ -4,10 +4,10 @@ const input=$('#fileInput'),drop=$('#dropZone'),years=$('#years'),yearsValue=$('
 const divider=document.createElement('div');divider.className='comparison-divider';grid.append(divider);
 grid.parentNode.insertBefore(downloadButton,grid.nextSibling);
 let sourceCanvas=null,renderVersion=0,comparisonPosition=50;
-const lang=(navigator.language||'en').toLowerCase(),ko=lang.startsWith('ko'),ja=lang.startsWith('ja'),zh=lang.startsWith('zh');
+const lang=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('freeutil-language')||navigator.language||'en').toLowerCase(),ko=lang.startsWith('ko'),ja=lang.startsWith('ja'),zh=lang.startsWith('zh');
 const t=ko?{title:'인터넷에서 몇 년 떠돈 짤 만들기',tagline:'이미지를 업로드하고 인터넷을 오래 떠돈 것처럼 만들어보세요.',upload:'이미지를 업로드하세요',hint:'JPG, PNG, WebP · 브라우저에서만 처리됩니다',choose:'이미지 선택',years:'인터넷에 떠돈 기간',year:'년',original:'원본 이미지',result:'몇 년 떠돈 짤',convert:'변환하기',download:'다운로드',footer:'간단하고 재미있는 이미지 도구',privacy:'이미지는 브라우저 안에서만 처리됩니다.'}:ja?{title:'インターネットを何年も漂ったネタ画像を作る',tagline:'画像をアップロードして、長年ネットを漂ったように加工します。',upload:'画像をアップロード',hint:'JPG, PNG, WebP · ブラウザ内で処理',choose:'画像を選択',years:'ネットを漂った期間',year:'年',original:'元の画像',result:'何年も漂った画像',convert:'変換',download:'ダウンロード',footer:'シンプルで楽しい画像ツール',privacy:'画像はブラウザ内だけで処理されます。'}:zh?{title:'制作在网络上流传多年的表情包',tagline:'上传图片，将它处理成在网络上流传多年的图片。',upload:'上传图片',hint:'JPG、PNG、WebP · 仅在浏览器中处理',choose:'选择图片',years:'在网络上传播的时间',year:'年',original:'原图',result:'流传多年的图片',convert:'开始转换',download:'下载',footer:'简单有趣的图片工具',privacy:'图片仅在浏览器内处理。'}:{title:'Create a Meme That Has Been Online for Years',tagline:'Upload an image and make it look like it has circulated online for years.',upload:'Upload an image',hint:'JPG, PNG, WebP · Processed in your browser',choose:'Choose image',years:'Years online',year:'years',original:'Original image',result:'Meme after years online',convert:'Process image',download:'Download',footer:'Simple, fun image tools',privacy:'Your image is processed only in your browser.'};
 if(ko)t.title='Meme Age';
-if(ko)t.hint='지원 형식: JPG, PNG, WebP.<br>이미지 파일은 서버로 전송되지 않습니다.';
+t.hint=ko?'지원 형식: JPG, PNG, WebP.<br>이미지 파일은 서버로 전송되지 않습니다.':ja?'対応形式：JPG、PNG、WebP。<br>画像ファイルはサーバーへ送信されません。':zh?'支持格式：JPG、PNG、WebP。<br>图片文件不会发送到服务器。':'Supported formats: JPG, PNG, WebP.<br>Image files are not sent to a server.';
 t.change=ko?'이미지 변경':ja?'画像を変更':zh?'更换图片':'Change image';
 t.invalid=ko?'JPG, PNG, WebP 이미지만 사용할 수 있습니다.':ja?'JPG、PNG、WebP画像のみ使用できます。':zh?'只能使用 JPG、PNG 或 WebP 图片。':'Only JPG, PNG, and WebP images are supported.';
 const allowedTypes=new Set(['image/jpeg','image/png','image/webp']);

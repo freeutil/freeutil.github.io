@@ -1,0 +1,17 @@
+.shell{width:min(1240px,calc(100% - 32px))}
+.toolbar-right{display:flex;align-items:center;gap:16px}
+.os-picker{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;font-weight:700}
+.os-picker select{height:32px;padding:0 28px 0 9px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font:600 11px 'Noto Sans KR'}
+.keyboard{min-width:1080px}
+.keyboard-lower{margin-top:15px}
+.mac-row{display:none}
+html[data-os=mac] .windows-row{display:none}
+html[data-os=mac] .mac-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 5fr 1fr 1fr}
+.unsupported-device{padding:22px 18px;border:1px solid #a9bfda;border-radius:15px;background:#edf4fb;color:var(--muted)}.unsupported-device h2{margin:0 0 7px;color:var(--ink);font-size:18px}.unsupported-device p{margin:0;font-size:13px}.mobile-unsupported .tester-card,.mobile-unsupported .related-info{display:none}
+@media(max-width:560px){.shell{width:calc(100% - 24px)}.toolbar-right{width:100%;align-items:flex-start;justify-content:space-between;gap:10px}.keyboard{min-width:1080px}}
+html[data-os=mac] .keyboard{border-color:#b5d1b8;background:linear-gradient(145deg,#f0f8f0,#e2f0e3);box-shadow:inset 0 -8px 18px #6f9f7626}
+html[data-os=mac] .key{border-color:#b5d1b8;background:#fbfffb;color:#3f5c45;box-shadow:0 2px 0 #9dbb9f}
+html[data-os=mac] .key.active{border-color:#70ad78;background:#78b982;color:#fff;box-shadow:0 0 0 3px #70ad782b,0 1px 0 #4d8d57}
+html[data-os=mac] .key.tested:not(.active){border-color:#9fc7a3;background:#ebf6ec;color:#4f7254;box-shadow:0 2px 0 #afd0b2}
+html[data-os=mac] .action-button{border-color:#b9d5bc;background:#edf7ee;color:#4b8252}
+html[data-os=mac] .action-button:hover{border-color:#70ad78;background:#e3f2e5}
