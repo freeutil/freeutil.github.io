@@ -80,4 +80,5 @@
 - `vimShortcuts`: 터미널 Vim 단축키 표
 - `calorieGuide`: 음식 칼로리와 권장량 계산 도구
 - `ladderGame`: 참여 인원 중 한 명을 뽑는 독박 사다리 게임
+- `gamepadTester`: 게임패드·컨트롤러 입력 테스트 도구
 
