@@ -3,7 +3,7 @@ Object.assign(window.FreeUtilReading, {
     "en": [
       "Keyboard test guide",
       "Press a key to highlight its position and see the number of currently pressed and tested keys. The layout is based on a full-size keyboard, but keyboards without a number pad can still be checked using the keys they have.",
-      "Changing the operating-system option updates the modifier labels to match the keyboard. Windows uses Ctrl, Win, Alt, and Menu, while macOS uses Control, Command, and Option. Detection itself uses physical key codes shared by both systems.",
+      "Changing the keyboard layout updates the modifier labels to match the connected keyboard. Windows uses Ctrl, Win, Alt, and Menu, while Mac uses Control, Command, and Option. Detection itself uses physical key codes shared by both systems.",
       "A browser separates code, which describes the physical key position, from key, which describes the character produced. This makes position checks possible across layouts such as QWERTY and AZERTY. For IME input, the key events are more useful than the completed text.",
       "On a laptop, Fn combinations may be handled first by firmware or the operating system, so brightness, volume, wireless, and other function keys may never reach the browser. F1–F12, media, and lock keys can also be intercepted by browser shortcuts; a missing display does not immediately prove a hardware failure.",
       "Rollover matters when several keys are pressed together for games or music. Labels such as 6KRO and NKRO describe how many simultaneous inputs the keyboard can recognize. Whether every key appears together also depends on its USB connection and internal circuit.",
@@ -18,7 +18,7 @@ Object.assign(window.FreeUtilReading, {
     "ja": [
       "キーボードテスト案内",
       "キーを押すと、その位置が強調され、現在押されているキーと確認したキーの数を表示します。フルサイズキーボードを基準にしていますが、テンキーのないキーボードでも搭載されているキーを確認できます。",
-      "OSの選択を変えると、キーボードに合わせて修飾キーの表示が変わります。WindowsはCtrl、Win、Alt、Menu、macOSはControl、Command、Optionを使います。検出自体は両方に共通する物理キーコードで行います。",
+      "キーボード配列を変えると、接続したキーボードに合わせて修飾キーの表示が変わります。WindowsはCtrl、Win、Alt、Menu、MacはControl、Command、Optionを使います。検出自体は両方に共通する物理キーコードで行います。",
       "ブラウザーは物理的な位置を表すcodeと、入力された文字を表すkeyを区別します。そのためQWERTYやAZERTYなど配列が違っても位置を確認できます。日本語入力のような変換中の文字は、完成した文字よりキーイベントを確認する方が正確です。",
       "ノートパソコンではFnの組み合わせをファームウェアやOSが先に処理し、明るさ、音量、無線などのキーがブラウザーに届かないことがあります。F1～F12、メディア、ロックキーもショートカットに使われるため、表示されないだけで故障とは限りません。",
       "ゲームや音楽で複数キーを同時に押す場合はロールオーバーが重要です。6KROやNKROは同時に認識できる入力数を示します。すべてのキーが同時に表示されるかは、USB接続方式と内部回路にも左右されます。",
@@ -33,7 +33,7 @@ Object.assign(window.FreeUtilReading, {
     "zh": [
       "键盘测试说明",
       "按下按键后会高亮其位置，并显示当前按下的键数和已测试的键数。布局以全尺寸键盘为基础，但没有数字键盘的设备仍可检查实际拥有的按键。",
-      "切换操作系统选项后，修饰键名称会与键盘习惯相符。Windows使用Ctrl、Win、Alt和Menu，macOS使用Control、Command和Option。检测本身使用两种系统都通用的物理按键代码。",
+      "切换键盘布局后，修饰键名称会与连接的键盘相符。Windows使用Ctrl、Win、Alt和Menu，Mac使用Control、Command和Option。检测本身使用两种系统都通用的物理按键代码。",
       "浏览器会区分表示物理位置的code和表示输入字符的key，因此即使使用QWERTY、AZERTY等不同布局，也能比较按键位置。对于输入法组合文字，检查按键事件比检查最终文字更准确。",
       "笔记本的Fn组合可能先由固件或操作系统处理，因此亮度、音量、无线等功能键不一定会传到浏览器。F1到F12、媒体键和锁定键也可能被快捷键拦截，没有显示不代表键盘立刻发生了硬件故障。",
       "游戏或音乐操作需要同时按下多个键时，键位翻转能力很重要。6KRO和NKRO表示键盘可同时识别的输入数量。所有按键能否同时出现，还取决于USB连接方式和键盘内部电路。",
