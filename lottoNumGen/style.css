@@ -29,3 +29,22 @@ footer{display:none}
 .top-note,.hero p{color:#5f6d65}.count-control,.disclaimer{color:#707b74}.set-label,.copy-button{color:#7f8982}.tip-row{color:#5d6b63}.tip-row strong{color:#59665f}
 .info-content{margin-top:20px;padding:18px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}.info-content h2{margin:0 0 7px;color:var(--ink);font-size:15px}.info-content h2:not(:first-child){margin-top:18px}.info-content p{margin:0 0 8px}.info-content ol{margin:0;padding-left:20px}
 .related-info{margin-top:18px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft,#fafafa);color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}.related-info summary{color:var(--ink);font-weight:700;cursor:pointer}.related-info[open] summary{margin-bottom:10px}.related-info p{margin:0}.related-info p+p{margin-top:10px}
+.ball{position:relative;flex:none}
+.ball.yellow{--ball-tone:#e8b83c}.ball.blue{--ball-tone:#5494ca}.ball.red{--ball-tone:#dd7060}.ball.gray{--ball-tone:#8c9a9a}.ball.green{--ball-tone:#65ad75}
+.ball-value{position:relative;z-index:1;display:block;font-variant-numeric:tabular-nums}
+.ball.is-waiting{background:#ece8df;color:#a19783;box-shadow:inset 0 0 0 1px #d9d1c0}
+.ball.is-rolling{background:var(--ball-tone);color:#fff;box-shadow:inset 0 -2px 0 rgba(0,0,0,.1)}
+.ball.is-rolling .ball-value{animation:lotto-roll .13s linear infinite}
+.ball.is-revealed{animation:lotto-ball-pop .5s cubic-bezier(.2,.8,.3,1) both}
+.ball.is-revealed::before{content:'';position:absolute;inset:0;border-radius:50%;background:#fff;opacity:0;pointer-events:none;animation:lotto-confirm-flash .3s ease-out both}
+.ball.is-revealed::after{content:'';position:absolute;inset:-4px;border:2px solid var(--ball-tone);border-radius:50%;pointer-events:none;animation:lotto-ring .5s ease-out both}
+.ball.is-revealed:last-child{animation-name:lotto-final-pop}
+.number-set.draw-complete{animation:lotto-row-flash .7s ease-out both!important}
+.copy-button:disabled{opacity:.4;cursor:default}
+@keyframes lotto-roll{0%{transform:translateY(2px) rotate(-7deg)}50%{transform:translateY(-2px) rotate(7deg)}100%{transform:translateY(2px) rotate(-7deg)}}
+@keyframes lotto-ball-pop{0%{transform:translateY(-8px) scale(.65)}45%{transform:translateY(-4px) scale(1.16)}70%{transform:translateY(1px) scale(.95)}100%{transform:none}}
+@keyframes lotto-final-pop{0%{transform:translateY(-10px) scale(.6)}45%{transform:translateY(-5px) scale(1.23)}75%{transform:translateY(1px) scale(.94)}100%{transform:none}}
+@keyframes lotto-ring{0%{opacity:.65;transform:scale(.65)}100%{opacity:0;transform:scale(1.35)}}
+@keyframes lotto-confirm-flash{0%{opacity:0}18%{opacity:.9}100%{opacity:0}}
+@keyframes lotto-row-flash{0%{box-shadow:0 0 0 2px #e8b83c55;background:#fff8dd}100%{box-shadow:0 0 0 0 transparent;background:#fff}}
+@media(prefers-reduced-motion:reduce){.number-set,.ball,.ball-value,.ball::before,.ball::after{animation:none!important}.ball.is-revealed::before,.ball.is-revealed::after{display:none}}
