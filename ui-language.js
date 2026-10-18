@@ -46,8 +46,8 @@
     '동작 또는 키 검색':['Search actions or keys','操作またはキーを検索','搜索操作或按键'],'표시된 단축키 복사':['Copy shown shortcut','表示中のショートカットをコピー','复制显示的快捷键'],'전체':['All','すべて','全部'],'기본':['Basics','基本','基础'],'시스템':['System','システム','系统'],'창·앱':['Windows and apps','ウィンドウとアプリ','窗口与应用'],'텍스트':['Text','テキスト','文本'],'동작':['Action','操作','操作'],'단축키':['Shortcut','ショートカット','快捷键'],'명령':['Command','コマンド','命令'],'모드':['Mode','モード','模式']
   };
   const value=key=>map[key]?.[locale==='en'?0:locale==='ja'?1:2];
-  const translateText=node=>{if(node.parentElement?.closest('script,style,textarea,#output,[data-reading-key]'))return;const key=node.nodeValue.trim();if(!key)return;const translated=value(key);if(translated)node.nodeValue=node.nodeValue.replace(key,translated)};
-  const translateAttributes=element=>{for(const attr of ['placeholder','title','aria-label']){const text=element.getAttribute(attr),translated=text&&value(text);if(translated)element.setAttribute(attr,translated)}};
+  const translateText=node=>{if(node.parentElement?.closest('script,style,textarea,#output,[data-reading-key],[data-user-content]'))return;const key=node.nodeValue.trim();if(!key)return;const translated=value(key);if(translated)node.nodeValue=node.nodeValue.replace(key,translated)};
+  const translateAttributes=element=>{if(element.closest('[data-user-content]'))return;for(const attr of ['placeholder','title','aria-label']){const text=element.getAttribute(attr),translated=text&&value(text);if(translated)element.setAttribute(attr,translated)}};
   const scan=()=>{const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(translateText);document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(translateAttributes)};
   scan();
   document.querySelectorAll('#setCount option').forEach(option=>{option.textContent=`${option.value} ${{en:'sets',ja:'セット',zh:'组'}[locale]}`});

@@ -25,3 +25,30 @@
 .bottom-labels span.target{display:block;align-content:center;padding:0;font-size:8px;line-height:10px}
 .bottom-labels[data-locale="ja"] span.target{font-size:7.5px;overflow-wrap:anywhere;line-break:strict}
 .ladder-path-glow{stroke-width:4.8;opacity:.12;filter:blur(4px)}.ladder-path{stroke-width:1.8;filter:drop-shadow(0 0 1px #f0a928)}.fuse-ember{fill:#fff8c7;stroke:#f0a928;stroke-width:.65;filter:drop-shadow(0 0 2px #fff1a8) drop-shadow(0 0 4px #f0a928);animation:fuse-flicker .12s ease-in-out infinite alternate}@keyframes fuse-flicker{from{opacity:.72}to{opacity:1}}
+/* Filter-free halo layers avoid offscreen blur/dash compositing in embedded browsers. */
+.ladder-progress{color:#f5b82e;pointer-events:none}
+.ladder-progress .ladder-path,.ladder-progress .ladder-path-glow{stroke:currentColor;filter:none;stroke-dasharray:none;stroke-dashoffset:0}
+.ladder-progress .glow-outer{stroke-width:6.4;opacity:.035}
+.ladder-progress .glow-middle{stroke-width:4.8;opacity:.055}
+.ladder-progress .glow-inner{stroke-width:3.2;opacity:.1}
+.name-settings{margin-top:12px}
+.name-settings[hidden],.name-inputs[hidden]{display:none}
+.name-toggle{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:12px;font-weight:700;cursor:pointer}
+.name-toggle input{margin:0;accent-color:var(--accent)}
+.name-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:10px 0 0;padding:0;border:0;min-width:0}
+.name-inputs label{display:flex;align-items:center;gap:6px;min-width:0;color:var(--muted);font:700 11px Manrope,sans-serif}
+.name-inputs label>span{flex:none;min-width:14px;text-align:center}
+.name-inputs input{width:100%;min-width:0;height:34px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font:500 12px 'Noto Sans KR',sans-serif}
+.name-inputs input:focus{outline:2px solid var(--accent);outline-offset:1px}
+#topLabels{align-items:end}
+.participant-entry{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-width:0;width:100%}
+.participant-name{display:block;max-width:100%;padding:0 2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink);font:700 10px/1.5 'Noto Sans KR',sans-serif}
+.winner-panel{max-width:calc(100% - 24px)}
+.winner-panel.named-winner{width:max-content;min-width:140px;text-align:center}
+.winner-panel.named-winner strong{max-width:100%;overflow-wrap:anywhere;font:800 clamp(20px,5vw,30px)/1.35 'Noto Sans KR',sans-serif}
+@media(max-width:560px){.name-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}.name-inputs input{height:36px;font-size:16px}}
+@media(min-width:769px){
+  .shell{width:min(var(--game-shell-width,800px),calc(100% - 32px))}
+  .number-preview{width:min(calc(100% - 18px),var(--ladder-width,420px));display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);justify-items:center;gap:0}
+  .ladder-stage{width:min(100%,var(--ladder-width,420px))}
+}
