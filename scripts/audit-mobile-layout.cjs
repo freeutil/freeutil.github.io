@@ -40,7 +40,7 @@ const { chromium } = require('playwright');
           const inspect = () => page.evaluate(() => {
             const issues = [];
             if (document.documentElement.scrollWidth > innerWidth + 1) issues.push({ kind: 'page overflow' });
-            for (const el of document.querySelectorAll('button,select,.input-wrap,.mode-switch label')) {
+            for (const el of document.querySelectorAll('button,select,.input-wrap,.mode-switch label,.tool-card')) {
               if (!el.checkVisibility() || !el.clientWidth) continue;
               const r = el.getBoundingClientRect();
               const shell = el.closest('.controller-shell');
