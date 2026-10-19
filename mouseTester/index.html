@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="마우스 버튼, 휠, 클릭 속도를 테스트하는 무료 웹 도구입니다. 왼쪽, 오른쪽, 휠, 사이드 버튼의 작동 여부를 즉시 확인하세요.">
+  <title>Free Util · 마우스 기능 테스트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../common.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://freeutil.github.io/mouseTester/">
+  <style>
+    .brand-mark { 
+      background: #e63946 !important; 
+      clip-path: polygon(20% 0,40% 0,40% 20%,60% 20%,60% 0,80% 0,80% 20%,100% 20%,100% 60%,80% 60%,80% 80%,60% 80%,60% 100%,40% 100%,40% 80%,20% 80%,20% 60%,0 60%,0 20%,20% 20%) !important; 
+      border-radius: 0 !important; 
+      width: 18px !important;
+      height: 18px !important;
+    }
+    .brand { 
+      font: 800 15px Manrope, sans-serif !important;
+      gap: 5px !important;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Free Util home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Free Util</span>
+      </a>
+      <div class="utility-language-picker">
+        <span id="langLabel">언어</span>
+        <select id="langSelect" aria-label="언어 선택">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 id="title">마우스 기능 테스트</h1>
+      <p id="tagline">마우스 버튼과 휠의 작동 여부를 확인합니다.</p>
+    </section>
+
+    <section class="tester-card" aria-label="마우스 테스트">
+      <div class="tester-toolbar">
+        <div class="status-line">
+          <i id="statusDot"></i>
+          <span id="statusText">마우스를 조작해 보세요.</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="test-summary">
+            <span><b id="lastInput">-</b><em id="lastLabel">최근 입력</em></span>
+            <span><b id="doubleClickStatus">-</b><em id="doubleLabel">더블 클릭</em></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tester-main">
+        <div class="visual-area" id="testArea">
+          <div class="mouse-visual">
+            <div class="mouse-shell">
+              <div class="mouse-buttons">
+                <div class="btn btn-left" data-button="0"></div>
+                <div class="btn btn-middle" data-button="1"></div>
+                <div class="btn btn-right" data-button="2"></div>
+              </div>
+              <div class="mouse-wheel" id="mouseWheel"></div>
+              <div class="mouse-side-buttons">
+                <div class="btn btn-back" data-button="3"></div>
+                <div class="btn btn-forward" data-button="4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="area-hint" id="hintText">테스트 영역 내에서 조작해 주세요.</div>
+        </div>
+
+        <div class="counter-grid">
+          <div class="counter-card" data-button="0">
+            <span class="btn-name" id="lbl-btn0">왼쪽 클릭</span>
+            <span class="count" id="count-0">0</span>
+          </div>
+          <div class="counter-card" data-button="1">
+            <span class="btn-name" id="lbl-btn1">휠 클릭</span>
+            <span class="count" id="count-1">0</span>
+          </div>
+          <div class="counter-card" data-button="2">
+            <span class="btn-name" id="lbl-btn2">오른쪽 클릭</span>
+            <span class="count" id="count-2">0</span>
+          </div>
+          <div class="counter-card" data-button="3">
+            <span class="btn-name" id="lbl-btn3">뒤로 가기</span>
+            <span class="count" id="count-3">0</span>
+          </div>
+          <div class="counter-card" data-button="4">
+            <span class="btn-name" id="lbl-btn4">앞으로 가기</span>
+            <span class="count" id="count-4">0</span>
+          </div>
+          <div class="counter-card" data-button="wheel">
+            <span class="btn-name" id="lbl-wheel">휠 스크롤</span>
+            <span class="count" id="count-wheel">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <details class="related-info">
+      <summary id="info-usage">사용법</summary>
+      <div class="info-content">
+        <p>마우스의 각 버튼을 클릭하거나 휠을 돌리면 화면의 마우스 이미지와 하단 카운터가 반응합니다.</p>
+        <p>오른쪽 클릭 테스트를 위해 테스트 영역 내에서는 브라우저 기본 메뉴가 나타나지 않도록 설정되어 있습니다.</p>
+      </div>
+    </details>
+    <details class="related-info">
+      <summary id="info-detail">상세 안내</summary>
+      <div class="info-content">
+        <p>이 도구는 브라우저의 MouseEvent API를 사용하여 입력을 감지합니다.</p>
+        <p>사이드 버튼(뒤로 가기/앞으로 가기)은 마우스 하드웨어 및 드라이버 설정에 따라 인식되지 않을 수 있습니다.</p>
+      </div>
+    </details>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
