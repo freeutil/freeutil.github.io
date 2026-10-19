@@ -4,10 +4,10 @@
   --card: #fff;
   --ink: #263344;
   --muted: #718096;
-  --line: #b8cbe1;
-  --accent: #6366f1;
-  --accent-dark: #4f46e5;
-  --soft: #eef2ff;
+  --line: #cbd5e1;
+  --accent: #3b82f6;
+  --accent-dark: #2563eb;
+  --soft: #eff6ff;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 }
 
 .hero h1 {
-  color: var(--accent-dark);
+  color: var(--ink);
   font-size: clamp(30px, 4vw, 40px);
   margin: 0 0 8px;
   letter-spacing: -.03em;
@@ -51,9 +51,9 @@ body {
   margin: 0 auto;
   padding: 16px;
   background: var(--card);
-  border: 1px solid #a9bfda;
+  border: 1px solid var(--line);
   border-radius: 15px;
-  box-shadow: 0 14px 30px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 14px 30px rgba(59, 130, 246, 0.1);
 }
 
 .tester-toolbar {
@@ -140,7 +140,7 @@ body {
 }
 
 .visual-area.active {
-  background: #e0e7ff;
+  background: #eff6ff;
   border-color: var(--accent);
 }
 
@@ -251,20 +251,20 @@ body {
 
 .counter-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  width: 360px;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  width: 320px;
 }
 
 .counter-card {
   background: white;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 1rem;
   border: 1px solid var(--line);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
   transition: transform 0.1s ease, border-color 0.2s ease, background 0.2s;
 }
 
