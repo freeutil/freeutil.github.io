@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="현재 사용 중인 나의 공인 IP 주소를 쉽고 빠르게 확인하는 무료 웹 도구입니다.">
+  <title>Free Util · 내 IP 확인</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../common.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://freeutil.github.io/myIp/">
+  <style>
+    .brand-mark { background:#e63946!important; clip-path:polygon(20% 0,40% 0,40% 20%,60% 20%,60% 0,80% 0,80% 20%,100% 20%,100% 60%,80% 60%,80% 80%,60% 80%,60% 100%,40% 100%,40% 80%,20% 80%,20% 60%,0 60%,0 20%,20% 20%)!important; border-radius:0!important; width:18px!important; height:18px!important; }
+    .brand { font:800 15px Manrope,sans-serif!important; gap:5px!important; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Free Util home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Free Util</span>
+      </a>
+      <div class="utility-language-picker">
+        <span id="langLabel">언어</span>
+        <select id="langSelect" aria-label="언어 선택">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 id="title">내 IP 확인</h1>
+      <p id="tagline">현재 접속 중인 나의 공인 IP 주소를 확인합니다.</p>
+    </section>
+
+    <section class="ip-card">
+      <div class="ip-display">
+        <span class="ip-label" id="lbl-ip">나의 공인 IP 주소</span>
+        <div class="ip-value" id="ipValue">Loading...</div>
+      </div>
+      <dl class="ip-details" id="ipDetails" hidden>
+        <div><dt id="countryLabel">국가</dt><dd id="countryValue">-</dd></div>
+        <div><dt id="regionLabel">지역</dt><dd id="regionValue">-</dd></div>
+        <div><dt id="cityLabel">도시</dt><dd id="cityValue">-</dd></div>
+        <div><dt id="timezoneLabel">시간대</dt><dd id="timezoneValue">-</dd></div>
+        <div><dt id="networkLabel">통신사·네트워크</dt><dd id="networkValue">-</dd></div>
+      </dl>
+      <p class="accuracy-note" id="accuracyNote"></p>
+      <div class="ip-actions"><button id="copyBtn" type="button">복사</button><button id="refreshBtn" type="button">다시 확인</button></div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <details class="related-info">
+      <summary id="info-usage">사용법</summary>
+      <div></div>
+    </details>
+    <details class="related-info">
+      <summary id="info-detail">상세 안내</summary>
+      <div></div>
+    </details>
+    <details class="related-info">
+      <summary id="info-facts">알아두면 좋은 점</summary>
+      <div></div>
+    </details>
+    <details class="related-info">
+      <summary id="info-story">흥미로운 IP 이야기</summary>
+      <div></div>
+    </details>
+  </main>
+  <script>const adsenseScript=document.createElement('script');adsenseScript.async=true;adsenseScript.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4401870717103583';adsenseScript.crossOrigin='anonymous';document.head.append(adsenseScript);</script>
+  <script src="script.js"></script>
+</body>
+</html>
