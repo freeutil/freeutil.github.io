@@ -80,6 +80,11 @@ body {
   letter-spacing: -0.02em;
   word-break: break-all;
 }
+.ip-addresses { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:0 0 18px; text-align:left; }
+.ip-addresses div { min-width:0; padding:9px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+.ip-addresses span { display:block; color:var(--muted); font-size:10px; font-weight:700; }
+.ip-addresses strong { display:block; margin-top:3px; color:var(--ink); font:700 12px/1.45 Manrope,sans-serif; overflow-wrap:anywhere; }
+@media (max-width:420px) { .ip-addresses { grid-template-columns:1fr; } }
 
 .ip-details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:0 0 22px; text-align:left; }
 .ip-details div { min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; }
