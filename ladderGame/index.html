@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="참여 인원 중 한 명을 독박으로 뽑는 간단한 독박 사다리 게임입니다.">
-  <title>Free Util · 독박 사다리</title>
+  <title>Free Util · 독박 사다리 게임</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
   <main class="shell">
     <header class="topbar"><a class="brand" href="../" aria-label="Free Util home"><span class="brand-mark" aria-hidden="true"></span> Free Util</a></header>
-    <section class="hero"><h1>독박 사다리</h1><p>참여 인원 중 한 명을 독박으로 뽑습니다.</p></section>
+    <section class="hero"><h1>독박 사다리 게임</h1><p>참여 인원 중 한 명을 독박으로 뽑습니다.</p></section>
     <section class="game-card" aria-label="독박 사다리 게임">
       <div class="game-controls">
         <label for="playerCount">참여 인원</label>
@@ -43,6 +43,7 @@
   </main>
   <script src="script.js?v=49"></script>
   <script>const pageLanguage=new URLSearchParams(location.search).get('lang')||localStorage.getItem('freeutil-language')||navigator.language||'en';const pageLocale=pageLanguage.toLowerCase().startsWith('ja')?'ja':pageLanguage.toLowerCase().startsWith('zh')?'zh':pageLanguage.toLowerCase().startsWith('ko')?'ko':'en';const ladderCopy={ko:['독박 사다리','참여 인원 중 한 명을 독박으로 뽑습니다.','시작'],en:['Penalty Ladder','Randomly choose one person from the group.','Start'],ja:['罰ゲームはしご','参加者から一人をランダムに選びます。','開始'],zh:['惩罚梯子游戏','从参与者中随机选出一人。','开始']}[pageLocale];document.title=`Free Util · ${ladderCopy[0]}`;document.querySelector('.hero h1').textContent=ladderCopy[0];document.querySelector('.hero p').textContent=ladderCopy[1];document.querySelector('#startButton').textContent=ladderCopy[2];if(location.protocol==='file:')document.querySelector('.brand')?.setAttribute('href','../index.html');</script>
+<script>if(typeof pageLocale!=='undefined'&&pageLocale==='ko'){document.title='Free Util · 독박 사다리 게임';document.querySelector('.hero h1').textContent='독박 사다리 게임';}</script>
 </body>
 </html>
 <script>if(typeof pageLocale!=='undefined'){const text={ko:['독박 사다리 게임','참여 인원','명','사다리 시작','오늘의 독박','번이 당첨되었습니다','인원수를 정하고 시작하세요.'],en:['Penalty Ladder Game','Players','players','Start ladder','Penalty','is selected','Set the number of players and start.'],ja:['罰ゲームはしご','参加人数','人','はしごを開始','罰ゲーム','番が選ばれました','人数を設定して開始してください。'],zh:['惩罚梯子游戏','参与人数','人','开始梯子','惩罚对象','号被选中','设置人数后开始。']}[pageLocale];document.querySelector('.game-card').setAttribute('aria-label',text[0]);const controls=document.querySelector('.game-controls');if(controls){controls.querySelector('label').textContent=text[1];controls.querySelector('span').textContent=text[2];document.querySelector('#startButton').textContent=text[3]}const winner=document.querySelector('.winner-panel');if(winner){winner.querySelector('span').textContent=text[4];winner.querySelector('small').textContent=text[5]}document.querySelector('#gameStatus').textContent=text[6];}</script>
