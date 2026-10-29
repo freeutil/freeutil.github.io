@@ -1,0 +1,1 @@
+const list=document.querySelector('#post-list');document.querySelector('#post-count').textContent=`${posts.length}개의 기록`;list.innerHTML=posts.map((p,i)=>`<a class="post-card" href="post.html?id=${i}"><div class="post-meta"><span class="post-tag">${p.tag}</span><span>${p.date}</span></div><h3>${p.title}</h3><p>${p.title}에 관한 오늘의 생각과 주변에서 발견한 작은 장면을 천천히 기록했습니다.</p></a>`).join('');
